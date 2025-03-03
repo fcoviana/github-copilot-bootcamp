@@ -1,0 +1,54 @@
+# Ignore Visual Studio specific files
+.vs/
+
+# Ignore build outputs
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs and databases
+*.log
+*.tlog
+*.sql
+*.sqlite
+*.db
+
+# Ignore package directories
+packages/
+node_modules/
+
+# Environment-specific files
+.env
+secrets.json
+appsettings.Development.json
+
+# Ignore compiled DLLs and executables
+*.exe
+*.dll
+*.pdb
+*.cache
+*.log
+
+# Rider and JetBrains specific files
+.idea/
+*.sln.iml
+
+# macOS files
+.DS_Store
+
+# Windows files
+Thumbs.db
+Desktop.ini
+
+# NuGet packages
+**/packages/
+
+# Resharper files
+*.DotSettings.user
+*.ReSharper

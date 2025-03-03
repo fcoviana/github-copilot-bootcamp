@@ -1,9 +1,12 @@
-﻿using System;
-
+﻿
 namespace System.Numbers
 {
     public class PrimeService
     {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+        }
         public bool IsPrime(int candidate)
         {
             if (candidate < 2)
