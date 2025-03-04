@@ -2,11 +2,17 @@
 
 A simple C# library that provides functionality to check if a number is prime.
 
+![Prime Number Service](images/prime-service-banner.png)
+
 ## Features
 
 - Check if a number is prime using the [`System.Numbers.PrimeService`](APL2007M4PrimeService/Numbers/PrimeService.cs) class
 - Comprehensive unit tests using xUnit
 - Supports .NET 9.0
+
+## Prerequisites
+
+- .NET 9.0 SDK or later
 
 ## Installation
 
@@ -14,6 +20,14 @@ To install the Prime Number Service library, you can use the .NET CLI:
 
 ```bash
 dotnet add package PrimeService
+```
+
+## Build Instructions
+
+To build the project, navigate to the project directory and run:
+
+```bash
+dotnet build
 ```
 
 ## Usage
@@ -40,6 +54,22 @@ foreach (var number in numbers)
     Console.WriteLine($"{number} is prime: {primeService.IsPrime(number)}");
 }
 ```
+
+![Prime Number Check](images/prime-check-example.png)
+
+## Methods
+
+### `bool IsPrime(int number)`
+
+Checks if the given number is a prime number.
+
+**Parameters:**
+
+- `number` (int): The number to check.
+
+**Returns:**
+
+- `bool`: `true` if the number is prime, otherwise `false`.
 
 ## Contributing
 
