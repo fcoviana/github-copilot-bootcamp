@@ -5,6 +5,48 @@ namespace ReportGenerator
     {
         static void Main(string[] args)
         {
+            var program = new Program();
+
+            // Create sample data
+            var sampleData = new List<SalesData>
+    {
+        new SalesData
+        {
+            productID = "PROD001",
+            quantitySold = 100,
+            unitPrice = 29.99,
+            baseCost = 15.00
+        },
+        new SalesData
+        {
+            productID = "PROD002",
+            quantitySold = 75,
+            unitPrice = 49.99,
+            baseCost = 25.00
+        },
+        new SalesData
+        {
+            productID = "PROD003",
+            quantitySold = 50,
+            unitPrice = 99.99,
+            baseCost = 45.00
+        }
+    };
+
+            // Create dictionary for quarterly data
+            var quarterlyData = new Dictionary<string, List<SalesData>>
+    {
+        { "Q1 2024", sampleData }
+    };
+
+            // Display report for each quarter
+            foreach (var quarter in quarterlyData)
+            {
+                if (!program.DisplayReports(quarter.Key, quarter.Value))
+                {
+                    Console.WriteLine($"Failed to generate report for {quarter.Key}");
+                }
+            }
 
         }
 
